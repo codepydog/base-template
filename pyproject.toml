@@ -11,10 +11,6 @@ requires = [
 
 [tool.black]
 line-length = 120
-exclude = [
-    ".venv",
-    "(_notebooks/.*)",
-]
 
 [tool.flake8]
 max-line-length = 120

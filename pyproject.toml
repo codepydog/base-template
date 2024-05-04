@@ -1,27 +1,21 @@
-[metadata]
+[tool.poetry]
 name = "<project_name>"
-author = "happyPydog"
-url = "https://github.com/happyPydog/<project_name>"
+version = "0.0.0"
+description = "<description>"
+authors = ["Happydog <happydog0930@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "<project_name>", from = "src" }]
 
 [build-system]
-requires = [
-    "setuptools",
-    "wheel",
-]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-line-length = 120
+line-length = 79
 
-[tool.flake8]
-max-line-length = 120
-exclude = [
-    "tests",
-    ".venv",
-]
-
-[tool.istor]
-lines-after-import = 2
-
-[tool.mypy]
-ignore_missing_imports = true
-show_error_codes = true
+[tool.isort]
+profile = "black"
+line_length = 79
+src_paths = ["src", "tests"]
+known_first_party = ["autonotellm"]

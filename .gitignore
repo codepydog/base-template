@@ -207,4 +207,14 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,macos
 
+# vecode
 .vscode
+
+# poetry
+poetry.lock
+
+# Google Client API
+token.json
+
+# Papers which testing on local machines
+papers*
